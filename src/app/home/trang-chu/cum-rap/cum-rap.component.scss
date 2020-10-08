@@ -1,0 +1,150 @@
+.theater{
+    .theater__logos{
+        flex-basis: 92px;
+        min-height: 735px;
+        border: 1px solid #ebebec;
+    }
+    .nav-link {
+        padding: 20px;
+        width: 100%;
+        border: none;
+        position: relative;
+        opacity: 0.5;
+        transition: all 0.25s;
+        &.active,
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+    
+        &::after {
+          content: "";
+          position: absolute;
+          top : 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #ebebec;
+          height: 1px;
+          width: calc(100% - 40px);
+        }
+    }
+    .theater__image {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+    .theater__details {
+            flex-basis: 30%;
+            min-width: 30%;
+            height: 735px;
+            border: 1px solid #ebebec;
+            
+            overflow-x: hidden;
+            // overflow-y: scroll;
+            .theater__details--item {
+                .nav-link {
+                    padding: 20px;
+                    width: 100%;
+                    border: none;
+                    position: relative;
+                    opacity: 0.5;
+                    transition: all 0.25s;
+                    &.active,
+                    &:hover,
+                    &:focus {
+                      opacity: 1;
+                    }
+                
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      top : 0;
+                      left: 50%;
+                      transform: translateX(-50%);
+                      background-color: #ebebec;
+                      height: 1px;
+                      width: calc(100% - 40px);
+                    }
+                }
+              cursor: pointer;
+              display: flex;
+            }
+        }
+        .theater__movies{
+            
+            flex-grow: 1;
+            height: 735px;
+            width: calc(100% - 92px - 30%);
+            border: 1px solid #ebebec;
+            
+            .theater__movies--item {
+                display: flex;
+                
+                flex-direction: column;
+                @extend .nav-link;
+                width: unset !important;
+                cursor: pointer;
+                opacity: 1 !important;
+            
+                .theater__movies--info {
+                    display: flex;
+                    
+                }
+                .timeList {
+                    margin-left: 2px;
+                    cursor: default !important;
+                    .btn-time{
+                        width: calc(20% - 10px);
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin: 0 10px 10px 0;
+                        padding: 5px 0;
+                        transition: all .2s;
+                        text-decoration: none;
+                        display: block;
+                        text-align: center;
+                        background-color: rgba(246,246,246,.5);
+                        border-radius: 7px;
+                        color: #9b9b9b;
+                        border: 1px solid #e4e4e4;
+                        .start-time{
+                            color: #108F3E;
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+}
+.wrapInfo {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-left: 20px ;
+    .BHD {
+        color: #8BC541;
+        color: 14px;
+    }
+    .googleMap{
+        text-decoration: none;
+        color: #fb4226;
+        font-size: 12px;
+    }
+      .showing__age {
+        display: inline-block;
+        text-align: center;
+        min-width: 30px;
+        border-radius: 4px;
+        background: #fb4226;
+        font-size: 14px;
+        color: white;
+        padding: 0 5px;
+        margin-right: 8px;
+        font-weight: 600;
+    }
+    .movieDetail {
+        font-size: 10px;
+        color: #9B9B9B;
+    }
+}

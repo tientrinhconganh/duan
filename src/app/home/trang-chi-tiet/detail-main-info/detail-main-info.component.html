@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-8 mx-auto">
+        <div class="row">
+            <div class="col-sm-3">
+                <img [src]="chiTietPhim.hinhAnh" alt="" class="img-fluid">
+            </div>
+            <div class="col-sm-3">
+                <p>
+                    Ngày chiếu: {{chiTietPhim.ngayChieuGioChieu}}
+                </p>
+                <p>
+                    Tên phim: {{chiTietPhim.tenPhim}}
+                </p>
+                <p>
+                    Thời lượng: {{chiTietPhim.thoiLuong}}
+                </p>
+                <button class="btn btn-success">Mua vé</button>
+            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <div class="detail-evaluate text-center">
+                    Evalute index
+                    <div class="evaluate-circle">
+                        <div class="circle-border"></div>
+                        <div class="rounded-circle"></div>
+                        <div class="circle-hidden"></div>
+                        <div class="haft-circle" ></div>
+                        <div class="haft-circle"></div>
+                        <div class=" residual-circle"></div>
+                        <span class="evaluate-index"></span>
+                    </div>
+                    Evalute stars
+                    <div class="evaluate-stars col-sm-12 d-flex mt-2">
+                        <i class="fa fa-star icon-star"></i>
+                        <i class="fa fa-star-o icon-star"></i>
+                    </div>
+                    Count the number of reviwers
+                    <div class="count-evaluate mt-1">
+                        <span> people evaluated</span>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-2 circleStar ng-scope" ng-if="filmDetail.avg_point > 0">
+                    <div class="circleSum">
+                    </div>
+                    <div id="circlePercent" class="c100 p56">
+                      <div class="circleBorder">
+                      </div>
+                      <span class="ng-binding">5.6</span>
+                      <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                      </div>
+                    </div>
+                    <div id="starMain" class="row star ng-binding" style="margin-top: 10px" ng-bind-html="setStar(filmDetail.avg_point)"><img class="smallStar" src="app/assets/img/icons/star1.png"><img class="smallStar" src="app/assets/img/icons/star1.png"><img class="half" src="app/assets/img/icons/star1.2.png"></div>
+                    <div class="row" style="margin-top: 10px">
+                      <span class="detailMainInfo1 ng-binding" style="margin: auto">8 người đánh giá</span>
+                    </div>
+                  </div> -->
+            </div>
+        </div>
+    </div>

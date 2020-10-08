@@ -1,0 +1,6 @@
+<div class="movie__item item">
+    <img [src] = "ItemPhim.hinhAnh" alt="">
+    <p><span class="ageType">C18</span>{{ ItemPhim.tenPhim | uppercase }}</p>
+    <p>Thời gian</p>
+    <button  routerLink="/chitiet/{{ ItemPhim.maPhim }}">MUA VÉ</button>  
+</div>

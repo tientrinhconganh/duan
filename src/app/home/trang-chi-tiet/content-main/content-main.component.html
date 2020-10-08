@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 mx-auto">
+            <div class="row">
+                <div class="col-sm-12 choose">
+                    <button class="btn " (click)="selection('lichChieu')">Lịch Chiếu</button>
+                    <button class="btn " (click)="selection('thongTin')">Thông Tin</button>
+                    <button class="btn " (click)="selection('danhGia')">Đánh Giá</button>
+                </div>
+                <div class="row" [ngSwitch]="loai">
+                    <div class="col-sm-12" *ngSwitchCase="'lichChieu'">
+                        <app-lich-chieu></app-lich-chieu>
+                    </div>
+                    <div class="col-sm-12" *ngSwitchCase="'thongTin'">
+                        <app-thong-tin></app-thong-tin>
+                    </div>
+                    <div class="col-sm-12" *ngSwitchCase="'danhGia'">
+                        <app-danh-gia></app-danh-gia>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

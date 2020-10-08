@@ -1,0 +1,115 @@
+<div class="signup--vertical">
+    <div class="container signup-modal">
+        <div class="row">
+            <div class="mx-auto">
+                <h2 class="text-center">Sign Up</h2>
+                <form [formGroup]="signupForm" (ngSubmit)="dangKy()">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="">Họ tên</label>
+                                <input type="text" name="hoTen" class="form-control" formControlName="hoTen" />
+                                <div *ngIf="signupForm.get('hoTen').invalid &&
+                                (signupForm.get('hoTen').touched ||
+                                 signupForm.get('hoTen').dirty)">
+                                    <div *ngIf="signupForm.get('hoTen').errors.required">
+                                        Họ tên không được để trống
+                                    </div>
+                                    <div *ngIf="signupForm.get('hoTen').errors.pattern">
+                                        Họ tên không đúng định dạng
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="">Tài khoản</label>
+                                <input type="text" name="taiKhoan" class="form-control" formControlName="taiKhoan" />
+                                <div *ngIf="
+                                signupForm.get('taiKhoan').invalid &&
+                                (signupForm.get('taiKhoan').touched ||
+                                signupForm.get('taiKhoan').dirty)
+                                ">
+                                    <div *ngIf="signupForm.get('taiKhoan').errors.required">
+                                        Tài khoản không được bỏ trống !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="">Mật khẩu</label>
+                                <input type="password" name="matKhau" class="form-control" formControlName="matKhau" />
+                                <div *ngIf="
+                                signupForm.get('matKhau').invalid &&
+                                (signupForm.get('matKhau').touched ||
+                                    signupForm.get('matKhau').dirty)
+                                ">
+                                    <div *ngIf="signupForm.get('matKhau').errors.required">
+                                        Mật khẩu không được để trống
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="">Xác nhận mật khẩu</label>
+                                <input type="password" name="matKhau" class="form-control" formControlName="matKhau" />
+                                <div *ngIf="
+                                signupForm.get('matKhau').invalid &&
+                                (signupForm.get('matKhau').touched ||
+                                    signupForm.get('matKhau').dirty)
+                                ">
+                                    <div *ngIf="signupForm.get('matKhau').errors.required">
+                                        Mật khẩu không được để trống
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class=" form-group">
+                                <label for="">Email</label>
+                                <input type="email" name="email" class="form-control" formControlName="email" />
+                                <div *ngIf="
+                                signupForm.get('email').invalid &&
+                                (signupForm.get('email').touched ||
+                                signupForm.get('email').dirty)
+                                ">
+                                    <div *ngIf="signupForm.get('email').errors.required">
+                                        Email không được để trống
+                                    </div>
+                                    <div *ngIf="signupForm.get('email').errors.pattern">
+                                        Email sai định dạng
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class=" form-group">
+                                <label for="">Số Điện Thoại</label>
+                                <input type="number" name="soDT" class="form-control" formControlName="soDT" />
+                                <div *ngIf="
+                                signupForm.get('soDT').invalid &&
+                                (signupForm.get('soDT').touched ||
+                                signupForm.get('soDT').dirty)
+                                ">
+                                    <div *ngIf="signupForm.get('soDT').errors.required">
+                                        Số điện thoại không được để trống
+                                    </div>
+                                    <div
+                                        *ngIf="signupForm.get('soDT').errors.minLength && signupForm.get('soDT').errors.maxLength">
+                                        Số điện thoại sai
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3">
+                        <button type="submit" class="btn btn-success">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<app-search-movie></app-search-movie>
+
+<div class="row my-5">
+    
+    <div class="col-12 text-center">
+        <button class="btn mr-2" [ngClass]="{'btn-success': dangChieuStatus}" (click)="HienPhimDangChieu()">Phim Đang Chiếu</button>
+        <button class="btn" [ngClass]="{'btn-success': !dangChieuStatus}" (click)="HienPhimSapChieu()">Phim Sắp Chiếu</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12" *ngIf="dangChieuStatus;else phimSapChieu">
+        <app-dang-chieu></app-dang-chieu>
+    </div>
+    <ng-template #phimSapChieu>
+        <div class="col-12">
+            <app-sap-chieu></app-sap-chieu>
+        </div>
+    </ng-template>
+</div>
